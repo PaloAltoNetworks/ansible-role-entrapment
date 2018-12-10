@@ -1,0 +1,5 @@
+---
+# default vars for entrapment
+
+# Traps installer shell script
+traps_installer: filename

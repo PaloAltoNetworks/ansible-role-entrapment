@@ -1,0 +1,7 @@
+- yum:
+    name:
+    - openssl
+    - ca-certificates
+    - policycoreutils-python
+    - selinux-policy-devel
+    state: present

@@ -1,0 +1,5 @@
+- zypper:
+    name:
+    - openssl
+    - ca-certificates
+    state: present

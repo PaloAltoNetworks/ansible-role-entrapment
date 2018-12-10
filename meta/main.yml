@@ -1,0 +1,49 @@
+galaxy_info:
+  role_name: entrapment
+  author: stealthllama
+  description: Installs the Palo Alto Networks Traps agent on Linux hosts
+  company: Palo Alto Networks
+  license: Apache-2.0
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Amazon
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+    - name: EL
+      version:
+        - 6
+        - 7
+    - name: OpenSUSE
+      versions:
+        - 12
+    - name: Ubuntu
+      versions:
+        - precise
+        - quantal
+        - trusty
+        - utopic
+        - xenial
+        - yakkety
+
+  galaxy_tags:
+    - centos
+    - debian
+    - installer
+    - suse
+    - oracle
+    - rhel
+    - server
+    - aws
+    - azure
+    - gcp
+    - ubuntu
+    - security
+    - paloaltonetworks
+    - traps
+
+dependencies: []
