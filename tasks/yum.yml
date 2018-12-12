@@ -1,4 +1,5 @@
-- yum:
+- name: yum install
+  yum:
     name:
     - openssl
     - ca-certificates

@@ -1,4 +1,5 @@
-- zypper:
+- name: zypper install
+  zypper:
     name:
     - openssl
     - ca-certificates
