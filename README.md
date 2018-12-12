@@ -11,9 +11,9 @@ The Traps installer for the Linux platform should be downloaded from the Traps M
 Role Variables
 --------------
 Available variables are listed below, along with default values (see defaults/main.yml):
-"""
+```
 linux_installer: filename
-"""
+```
 
 Usage
 -----
@@ -25,7 +25,7 @@ None
 
 Example Playbook
 ----------------
-"""
+```
 \---
 \- name: install traps
   hosts: all
@@ -33,7 +33,7 @@ Example Playbook
 
   roles:
   \- entrapment
-"""
+```
 
 License
 -------

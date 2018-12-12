@@ -1,24 +1,30 @@
 ---
 # main tasks file for entrapment
+
 - name: check for cytool binary
   stat:
     path: /opt/traps/bin/cytool
   register: traps_installed
+
 - name: yum install dependencies
   include_tasks: yum.yml
-  when: ansible_os_family == 'RedHat' and traps_installed.stat.exists == False
+  when: ansible_os_family == 'RedHat' and not traps_installed.stat.exists
+
 - name: apt install dependencies
   include_tasks: apt.yml
-  when: ansible_os_family == 'Debian' and traps_installed.stat.exists == False
+  when: ansible_os_family == 'Debian' and not traps_installed.stat.exists
+
 - name: zypper install dependences
   include_tasks: zypper.yml
-  when: ansible_os_family == 'Suse' and traps_installed.stat.exists == False
+  when: ansible_os_family == 'Suse' and not traps_installed.stat.exists
+
 - name: copy traps installer
   copy:
     src: "{{ traps_installer }}"
     dest: /tmp
     mode: 0755
-  when: traps_installed.stat.exists == False
+  when: not traps_installed.stat.exists
+
 - name: run traps installer
   command: sh /tmp/{{ traps_installer }} --quiet
   when: not traps_installed.stat.exists
