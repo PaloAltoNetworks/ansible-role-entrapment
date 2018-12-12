@@ -26,13 +26,13 @@ None
 Example Playbook
 ----------------
 ```
-\---
-\- name: install traps
+---
+- name: install traps
   hosts: all
   become: yes
 
   roles:
-  \- entrapment
+  - entrapment
 ```
 
 License
