@@ -32,7 +32,7 @@ Example Playbook
   become: yes
 
   roles:
-  - entrapment
+  - stealthllama.entrapment
 ```
 
 License
